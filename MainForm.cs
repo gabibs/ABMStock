@@ -18,6 +18,7 @@ namespace ABMStock
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		public ConexionBBDD conectorBBDD;
 		public MainForm()
 		{
 			//
@@ -29,5 +30,19 @@ namespace ABMStock
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+
+		void Button1Click(object sender, EventArgs e)
+		{
+				conectorBBDD = new ConexionBBDD();
+			if(label1.Text.Equals("Conectado")){
+				conectorBBDD.CloseConnection();
+				label1.Text = "Desconectado";
+			} else {
+				conectorBBDD.OpenConnection();
+				label1.Text = "Conectado";
+			}
+		}
 	}
+
 }

@@ -20,6 +20,8 @@ namespace ABMStock
 		public System.Windows.Forms.TabPage tabAlta;
 		public System.Windows.Forms.TabPage tabBaja;
 		public System.Windows.Forms.TabPage tabConsulta;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button button1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -42,12 +44,14 @@ namespace ABMStock
 		/// </summary>
 		public void InitializeComponent()
 		{
-			
 			this.tabButtonAltaMercaderia = new System.Windows.Forms.TabControl();
 			this.tabAlta = new System.Windows.Forms.TabPage();
+			this.label1 = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
 			this.tabBaja = new System.Windows.Forms.TabPage();
 			this.tabConsulta = new System.Windows.Forms.TabPage();
 			this.tabButtonAltaMercaderia.SuspendLayout();
+			this.tabAlta.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabButtonAltaMercaderia
@@ -63,6 +67,8 @@ namespace ABMStock
 			// 
 			// tabAlta
 			// 
+			this.tabAlta.Controls.Add(this.label1);
+			this.tabAlta.Controls.Add(this.button1);
 			this.tabAlta.Location = new System.Drawing.Point(4, 25);
 			this.tabAlta.Name = "tabAlta";
 			this.tabAlta.Padding = new System.Windows.Forms.Padding(3);
@@ -70,6 +76,24 @@ namespace ABMStock
 			this.tabAlta.TabIndex = 0;
 			this.tabAlta.Text = "Alta de Mercadería";
 			this.tabAlta.UseVisualStyleBackColor = true;
+			// 
+			// label1
+			// 
+			this.label1.Location = new System.Drawing.Point(166, 62);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.TabIndex = 1;
+			this.label1.Text = "No Conectado";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(166, 121);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 23);
+			this.button1.TabIndex = 0;
+			this.button1.Text = "conectar";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// tabBaja
 			// 
@@ -100,8 +124,8 @@ namespace ABMStock
 			this.Name = "MainForm";
 			this.Text = "ABMStock";
 			this.tabButtonAltaMercaderia.ResumeLayout(false);
+			this.tabAlta.ResumeLayout(false);
 			this.ResumeLayout(false);
-			
 
 		}
 	}
